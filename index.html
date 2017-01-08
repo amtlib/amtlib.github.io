@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="typed.min.js"></script>
+    <script src="clipboard.js"></script>
+    <script>
+        $(function() {
+            $("#email").typed({
+                strings: ["grzegorz.pach@protonmail.com"],
+                typeSpeed: 0,
+                showCursor: false
+            });
+            $(window).resize()
+            new Clipboard('#email')
+        });
+
+        $(window).resize(function() {
+            $('body h1').css('font-size', $(window).width() / 20)
+        })
+    </script>
+    <title>Grzegorz Pach</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Abril Fatface;
+            color: white;
+
+        }
+        body div{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top:0;
+            left: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        body h1 {
+            width: 100%;
+            text-align: center;
+        }
+        body h1::selection{
+            background-color: #A7DBD8;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Kontakt: </h1>
+    <div>
+        <h1 id="email" data-clipboard-target="#email"></h1>
+    </div>
+</body>
+
+</html>
