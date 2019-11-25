@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href="{% static 'premie/img/favicon.ico' %}" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Gerda Hydomat</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/"><img src="img/logo.png" style="height:40px" class="img-fluid;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <form class="nav-item form-inline my-2 my-lg-0" id="navbar-select" method="GET">
+                    <!-- <div class="form-group">
+                    <select class="form-control" class="dropdown" id="months" role="button" name="time">
+                        <option>Dział DKF</option>
+                        <option>Dział NUO</option>
+                        <option>Dział PPP</option>
+                    </select>
+                </div> -->
+                    <div class="form-group">
+                        <select class="form-control" class="dropdown" id="months" role="button" name="time">
+                            <option>I 2020</option>
+                            <option>II 2020</option>
+                            <option>III 2020</option>
+                            <option>IV 2020</option>
+                            <option selected="selected">IV 2019</option>
+                            <option>III 2019</option>
+                            <option>II 2019</option>
+                            <option>II 2019</option>
+                        </select>
+                    </div>
+                </form>
+            </ul>
+            <span class="navbar-text px-4">Witaj, Kierowniku</span>
+            <a href="{% url 'account_logout' %}" class="mx-2 btn btn-outline-danger my-2 my-sm-0">Wyloguj się</a>
+        </div>
+    </nav>
+
+    <ul class="nav nav-tabs nav-justified navbar-light bg-light">
+        <li class="nav-item"><a class="nav-link" href="indywidualne.html">Cel indywidualny</a></li>
+        <li class="nav-item"><a class="nav-link" href="zespolowy.html">Cel zespołowy</a></li>
+        <li class="nav-item"><a class="nav-link active disabled" href="#">Cel firmowy</a></li>
+        <li class="nav-item"><a class="nav-link" href="podsumowanie.html">Podsumowanie celów</a></li>
+
+    </ul>
+
+    <table class="table table-scores">
+        <thead>
+            <tr>
+                <th scope="col" class="align-middle text-center">Dział</th>
+                <th scope="col" class="align-middle text-center">Cel firmowy</th>
+                <th scope="col" class="align-middle text-center">Wartość bieżąca</th>
+                <th scope="col" class="align-middle text-center">Rezultat</th>
+                <th scope="col" class="align-middle text-center">Akcja</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="align-middle text-center">Dział DKF</td>
+                <td class="align-middle text-center">
+                    <div class="form-group"></div>
+                    <select class="form-control form-control-lg">
+                        <option value="">Cel firmowy numer jeden. Może on być dłuższy</option>
+                        <option value="">Cel firmowy numer dwa. Może on być o wiele dłuższy</option>
+                        <option value="">Cel firmowy numer trzy. Może on być o wiele wiele dłuższy</option>
+                    </select>
+                </td>
+                <td class="align-middle text-center">
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="40">
+                    </div>
+                </td>
+                <td class="align-middle text-center">
+                    40 / 100 = 40%
+                </td>
+                <td class="align-middle text-center">
+                    <button class="btn btn-primary">Zapisz</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="align-middle text-center">Dział NUO</td>
+                <td class="align-middle text-center">
+                    <div class="form-group"></div>
+                    <select class="form-control form-control-lg">
+                        <option value="">Cel firmowy numer jeden. Może on być dłuższy</option>
+                        <option value="">Cel firmowy numer dwa. Może on być o wiele dłuższy</option>
+                        <option value="">Cel firmowy numer trzy. Może on być o wiele wiele dłuższy</option>
+                    </select>
+                </td>
+                <td class="align-middle text-center">
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="123">
+                    </div>
+                </td>
+                <td class="align-middle text-center">
+                    123 / 320 = 38%
+                </td>
+                <td class="align-middle text-center">
+                    <button class="btn btn-primary">Zapisz</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="align-middle text-center">Dział PPO</td>
+                <td class="align-middle text-center">
+                    <div class="form-group"></div>
+                    <select class="form-control form-control-lg">
+                        <option value="">Cel firmowy numer jeden. Może on być dłuższy</option>
+                        <option value="">Cel firmowy numer dwa. Może on być o wiele dłuższy</option>
+                        <option value="">Cel firmowy numer trzy. Może on być o wiele wiele dłuższy</option>
+                    </select>
+                </td>
+                <td class="align-middle text-center">
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="400">
+                    </div>
+                </td>
+                <td class="align-middle text-center">
+                    123 / 320 = 38%
+                </td>
+                <td class="align-middle text-center">
+                    <button class="btn btn-primary">Zapisz</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <a class="btn btn-primary btn-lg" href="edytor.html">Edytor celów firmowych</a>
+
+    <div class="comment">
+        Wartość oczekiwana jest wpisywana w widoku edycji celów firmowych. Czy jedna grupa pracowników może mieć wiele celów firmowych? Cel firmowy może zostać zmieniony, czy raz przypisany pozostaje do końca kwartału?
+        <br> Przycisk do edytora celów firmowych jest jedynie dla upoważnionych pracowników.
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script>
+        $(".alert-dismissible").fadeTo(2000, 500).slideUp(500, function () {
+            $(".alert-dismissible").alert('close');
+        });
+    </script>
+</body>
+
+</html>
