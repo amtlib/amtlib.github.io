@@ -11,6 +11,14 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
     <title>Gerda Hydomat</title>
+    <style>
+        body>table>tbody>tr {
+            cursor: pointer;
+        }
+        .hiddenRow {
+            padding: 0 40px !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -58,8 +66,9 @@
 
     </ul>
 
-    <table class="table table-scores">
-        <thead>
+
+    <table class="table" style="border-collapse:collapse;">
+        <!-- <thead>
             <tr>
                 <th scope="col" class="align-middle text-center">#</th>
                 <th scope="col" class="align-middle text-center">Imię i nazwisko</th>
@@ -72,204 +81,75 @@
                 <th scope="col" class="text-center align-middle text-center">Komentarz</th>
                 <th scope="col" class="text-center align-middle text-center">Akcje</th>
             </tr>
-        </thead>
+        </thead> -->
         <tbody>
-            <tr>
+            <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle">
                 <th scope="row" class="align-middle text-center">1</th>
                 <td class="align-middle text-center">Jan Kowalski</td>
-                <td class="align-middle text-center p-0">
-                        <textarea class="form-control" rows="3">Tu znajdzie się opis zadania...</textarea>
+                <td class="align-middle text-center">
+                    <span class="badge badge-pill badge-success">1/1 Wszystkie cele zakończone</span>
                 </td>
                 <td class="align-middle text-center">
-                        <input class="form-control" type="text" value="100">
+                    <span class="badge badge-pill badge-warning">Wymagany cel menadzerski</span>
+                </td>
+                <td class="align-middle text-center" style="min-width: 170px">
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 49.2%;"
+                            aria-valuenow="49.2" aria-valuemin="0" aria-valuemax="100">49.2%</div>
                     </div>
                 </td>
-                <td class="align-middle text-center">
-                        <input class="form-control" type="text" value="200">
-                </td>
-                <td class="align-middle text-center">
-                        <input class="form-control" type="text" value="250">
-                </td>
-                <td class="align-middle text-center">
-                    <input class="form-control" type="text" value="123">
-                </td>
-                <td class="align-middle text-center">
-                    123 / 250 = 49.2%
-                </td>
-                <td class="align-middle text-center p-0">
-                        <textarea class="form-control" rows="3">Dodatkowe informacje, notatki</textarea>
-                </td>
-                <td class="align-middle text-center">
-                    <button class="btn btn-warning">Zmień</button> &nbsp;
-                    <button class="btn btn-primary">Zatwierdź</button>
+                <td class="align-middle text-right">
+                    <button class="btn btn-primary">Zatwierdź wszystkie cele</button>
+                    <button class="btn btn-success">+</button>
                 </td>
             </tr>
-
             <tr>
-                <th scope="row" class="align-middle text-center">1</th>
-                <td class="align-middle text-center">Jan Kowalski</td>
-                <td class="align-middle text-center p-0">
-                        <textarea class="form-control" rows="3">Tu znajdzie się opis zadania...</textarea>
-                </td>
-                <td class="align-middle text-center">
-                        <input class="form-control" type="text" value="100">
-                </td>
-                <td class="align-middle text-center">
-                        <input class="form-control" type="text" value="200">
-                </td>
-                <td class="align-middle text-center">
-                        <input class="form-control" type="text" value="250">
-                </td>
-                <td class="align-middle text-center">
-                    <input class="form-control" type="text" value="123">
-                </td>
-                <td class="align-middle text-center">
-                    123 / 250 = 49.2%
-                </td>
-                <td class="align-middle text-center p-0">
-                        <textarea class="form-control" rows="3">Dodatkowe informacje, notatki</textarea>
-                </td>
-                <td class="align-middle text-center">
-                    <button class="btn btn-warning">Zmień</button> &nbsp;
-                    <button class="btn btn-primary">Zatwierdź</button>
-                </td>
-            </tr>
-
-            <tr class="employee-end">
-                <th scope="row" class="align-middle text-center">1</th>
-                <td class="align-middle text-center">Jan Kowalski</td>
-                <td class="align-middle text-center p-0">
-                        <textarea class="form-control" rows="3">Tu znajdzie się opis zadania...</textarea>
-                </td>
-                <td class="align-middle text-center">
-                        <input class="form-control" type="text" value="123">
-                </td>
-                <td class="align-middle text-center">
-                        <input class="form-control" type="text" value="200">
-                </td>
-                <td class="align-middle text-center">
-                        <input class="form-control" type="text" value="250">
-                </td>
-                <td class="align-middle text-center">
-                    <input class="form-control" type="text" value="123">
-                </td>
-                <td class="align-middle text-center">
-                    123 / 250 = 49.2%
-                </td>
-                <td class="align-middle text-center p-0">
-                        <textarea class="form-control" rows="3">Dodatkowe informacje, notatki</textarea>
-                </td>
-                <td class="align-middle text-center">
-                    <button class="btn btn-warning">Zmień</button> &nbsp;
-                    <button class="btn btn-primary">Zatwierdź</button>
-                </td>
-            </tr>
-
-            <tr>
-                <th scope="row" class="align-middle text-center">2</th>
-                <td class="align-middle text-center">Janina Nowak</td>
-                <td class="align-middle text-center p-0">
-                        <textarea class="form-control" rows="3">Tu znajdzie się opis zadania...</textarea>
-                </td>
-                <td class="align-middle text-center">
-                        <input class="form-control" type="text" value="123">
-                </td>
-                <td class="align-middle text-center">
-                        <input class="form-control" type="text" value="200">
-                </td>
-                <td class="align-middle text-center">
-                        <input class="form-control" type="text" value="250">
-                </td>
-                <td class="align-middle text-center">
-                    <input class="form-control" type="text" value="123">
-                </td>
-                <td class="align-middle text-center">
-                    123 / 250 = 49.2%
-                </td>
-                <td class="align-middle text-center p-0">
-                        <textarea class="form-control" rows="3">Dodatkowe informacje, notatki</textarea>
-                </td>
-                <td class="align-middle text-center">
-                    <button class="btn btn-warning">Zmień</button> &nbsp;
-                    <button class="btn btn-primary">Zatwierdź</button>
-                </td>
-            </tr>
-
-            <tr>
-                <th scope="row" class="align-middle text-center">2</th>
-                <td class="align-middle text-center">Janina Nowak</td>
-                <td class="align-middle text-center p-0">
-                        <textarea class="form-control" rows="3">Tu znajdzie się opis zadania...</textarea>
-                </td>
-                <td class="align-middle text-center">
-                        <input class="form-control" type="text" value="123">
-                </td>
-                <td class="align-middle text-center">
-                        <input class="form-control" type="text" value="200">
-                </td>
-                <td class="align-middle text-center">
-                        <input class="form-control" type="text" value="250">
-                </td>
-                <td class="align-middle text-center">
-                    <input class="form-control" type="text" value="123">
-                </td>
-                <td class="align-middle text-center">
-                    123 / 250 = 49.2%
-                </td>
-                <td class="align-middle text-center p-0">
-                        <textarea class="form-control" rows="3">Dodatkowe informacje, notatki</textarea>
-                </td>
-                <td class="align-middle text-center">
-                    <button class="btn btn-warning">Zmień</button> &nbsp;
-                    <button class="btn btn-primary">Zatwierdź</button>
-                </td>
-            </tr>
-
-            <tr class="employee-end">
-                <th scope="row" class="align-middle text-center">2</th>
-                <td class="align-middle text-center">Janina Nowak</td>
-                <td class="align-middle text-center p-0">
-                        <textarea class="form-control" rows="3">Tu znajdzie się opis zadania...</textarea>
-                </td>
-                <td class="align-middle text-center">
-                        <input class="form-control" type="text" value="123">
-                </td>
-                <td class="align-middle text-center">
-                        <input class="form-control" type="text" value="200">
-                </td>
-                <td class="align-middle text-center">
-                        <input class="form-control" type="text" value="250">
-                </td>
-                <td class="align-middle text-center">
-                    <input class="form-control" type="text" value="123">
-                </td>
-                <td class="align-middle text-center">
-                    123 / 250 = 49.2%
-                </td>
-                <td class="align-middle text-center p-0">
-                        <textarea class="form-control" rows="3">Dodatkowe informacje, notatki</textarea>
-                </td>
-                <td class="align-middle text-center">
-                    <button class="btn btn-warning">Zmień</button> &nbsp;
-                    <button class="btn btn-primary">Zatwierdź</button>
+                <td colspan="6" class="hiddenRow">
+                    <div class="accordian-body collapse" id="demo1">
+                        <table class="table">
+                            <tr>
+                                <th scope="col" class="text-center align-middle text-center">Opis zadania</th>
+                                <th scope="col" class="text-center align-middle text-center">Wartość bieżąca</th>
+                                <th scope="col" class="text-center align-middle text-center">Wartość akceptowalna</th>
+                                <th scope="col" class="text-center align-middle text-center">Wartość oczekiwana</th>
+                                <th scope="col" class="text-center align-middle text-center">Wartość uzyskana</th>
+                                <th scope="col" class="text-center align-middle text-center">Ocena końcowa</th>
+                                <th scope="col" class="text-center align-middle text-center">Komentarz</th>
+                                <th scope="col" class="text-center align-middle text-center">Akcja</th>
+                            </tr>
+                            <tr>
+                                <td class="align-middle text-center p-0">
+                                    <textarea class="form-control" rows="3">Tu znajdzie się opis zadania...</textarea>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <input class="form-control" type="text" value="100">
+                                </td>
+                                <td class="align-middle text-center">
+                                    <input class="form-control" type="text" value="200">
+                                </td>
+                                <td class="align-middle text-center">
+                                    <input class="form-control" type="text" value="250">
+                                </td>
+                                <td class="align-middle text-center">
+                                    <input class="form-control" type="text" value="123">
+                                </td>
+                                <td class="align-middle text-center">
+                                    123 / 250 = 49.2%
+                                </td>
+                                <td class="align-middle text-center p-0">
+                                    <textarea class="form-control" rows="3">Dodatkowe informacje, notatki</textarea>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <button class="btn btn-danger">X</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </td>
             </tr>
         </tbody>
     </table>
 
-    <div class="comment">
-        Na jednej stronie dostęp do wszyskich pracowników z danego działu. Jeżeli pracownik jednocześnie kogoś ocenia,
-        to będzię odznaczony innym kolorem (by było wiadomo, że powinien dostać cel menedżerski). Domyślnie pracownik ma
-        trzy cele indywidualne (zawsze są trzy, czy może być więcej/mniej?). Upewnijmy się, że znajdują się wszystkie
-        potrzebne pola. <br>
-        Po zatwierdzeniu celu przez osobę ocenianą i oceniającą przyciski zmieniają się na "Zapisz" i "Oznacz cel jako
-        zakończony". Od tej pory oceniany nie ma dostępu do zmiany obranego celu, jednak może zaktualizować wartość
-        bieżącą (będzie oznaczenie na stronie internetowej, że ostatnim edytującym był oceniany i będzie podgląd do
-        poprzedniej wartości tego pola, na przykład poprzez dymek - taki jak przy zmianach przez zarząd w premiach
-        miesięcznych).
-        Po oznaczeniu celu jako zakończony nie ma dostępu do edycji (bramka bezpieczeństwa)?
-
-    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
