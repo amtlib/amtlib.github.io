@@ -3,10 +3,6 @@ body {
     min-height: 100vh;
     background-color: rgba(0,0,0,.7);
     background-size: 100%;
-    /* background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(../img/computer.jpeg); */
-    /* background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; */
     font-family: Lato, sans-serif;
 }
 
@@ -18,7 +14,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 
 p {
     color: #fff;
