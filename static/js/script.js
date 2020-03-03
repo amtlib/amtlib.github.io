@@ -1,7 +1,7 @@
 var columns, rows; //according to canvas size
 var board; //accual board
 var next; //board in next frame
-var cell_size = 10; //single cell size
+var cell_size = 20; //single cell size
 var running = true; //when running == true -> script changes state of cells according to 'game of life' rules
 var game_speed = 20; //starting game speed when running is true
 
